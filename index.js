@@ -2,7 +2,7 @@
 const TeleBot = require('telebot');
 const bot = new TeleBot("5353629531:AAFxt8atCemi9FTIh8ovErmCeuPt7euxkt0");
 bot.start();
-const { Client } = require('whatsapp-web.js');
+const { Client } = require(__dirname+'/nadee');
 const client = new Client();
 client.on('qr', (qr) => {
     // Generate and scan this code with your phone
