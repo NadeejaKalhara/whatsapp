@@ -10,7 +10,7 @@ client.on('qr', (qr) => {
 });
 
 
-
+// hello
 
 
  async function doSomething1(phone,message) {
