@@ -10,20 +10,7 @@ client.on('qr', (qr) => {
 });
 
 
-const doSomething = (phone,message) => {
-    if (phone == undefined || message == undefined) {
-        res.send({ status:"error", message:"please enter valid phone and message" })
-    } else {
-        client.sendMessage(phone + '@c.us', message).then((response) => {
-         
-        console.log({ status:'success', message: `Message successfully sent to ${phone}` })
-        bot.sendMessage(-1001755288889, `Message successfully sent to ${phone}`)
-            
-        }).catch((err) => {
-            bot.sendMessage(-1001755288889, err)
-        });
-    }
- }
+
 
 
  async function doSomething1(phone,message) {
@@ -54,8 +41,8 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-    if (msg.body == '!ping') {
-        msg.reply('pong');
+    if (msg.body == 'help') {
+        msg.reply('We add this feature soon');
     }
 
 
@@ -66,6 +53,7 @@ client.on('message', msg => {
 client.initialize();
 
 bot.on('text', (msg) => {
+    client.initialize();
     if (msg.text.includes("||||")){
     const phone = msg.text.split("||||")[0] 
     const message = msg.text.split("||||")[1] 

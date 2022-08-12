@@ -483,7 +483,9 @@ class Client extends EventEmitter {
      * Closes the client
      */
     async destroy() {
-        await this.pupBrowser.close();
+        const page = (await this.pupBrowser.pages())[0]
+      //  await this.pupBrowser.close();
+      await page.close()
     }
 
     /**
