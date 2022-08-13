@@ -40,7 +40,11 @@ client.on('ready', () => {
 
 });
 
-
+client.on('message', msg => {
+  if (msg.body == 'help') {
+      msg.reply('No help docs yet');
+  }
+});
 
 client.initialize();
 
