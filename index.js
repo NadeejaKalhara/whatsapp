@@ -40,14 +40,6 @@ client.on('ready', () => {
 
 });
 
-client.on('message', msg => {
-    if (msg.body == 'help') {
-        msg.reply('We add this feature soon');
-    }
-
-
-});
-
 
 
 client.initialize();
